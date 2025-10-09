@@ -1,0 +1,117 @@
+/* Color Palette */
+:root {
+  --deep-navy: #0f2027;
+  --gold: #d4af37;
+  --soft-white: #ffffff;
+  --text-dark: #2c2c2c;
+  --text-muted: #555;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--soft-white);
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--soft-white);
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--deep-navy);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+}
+
+/* Hero Section */
+.services-hero {
+  background: linear-gradient(to right, var(--deep-navy), #203a43, #2c5364);
+  color: var(--soft-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+.services-hero h2 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+.services-hero p {
+  font-size: 1.2rem;
+}
+
+/* Services List */
+.services-list {
+  padding: 4rem 0;
+  background-color: var(--soft-white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--deep-navy);
+}
+.service-card p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--deep-navy);
+  color: var(--soft-white);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-hero h2 {
+    font-size: 2.2rem;
+  }
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+}
