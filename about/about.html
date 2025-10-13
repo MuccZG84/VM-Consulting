@@ -8,21 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet" />
 </head>
 <body>
-  
+
   <header class="navbar">
     <div class="container">
       <h1 class="logo">VM Consulting</h1>
-      <section class="about-hero">
-  <div class="container">
-  
-    <p><strong>My journey from electronics to elegant front-end development.</strong> </p>
-  </div>
-</section>
-      <nav>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <nav class="nav-links">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about/about.html" class="active">About</a></li>
-          <a href="../services/services.html">Services</a>
+          <li><a href="../services/services.html">Services</a></li>
           <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
           <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
@@ -30,34 +30,40 @@
     </div>
   </header>
 
+  <!-- Boxed Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="gradient-box">
+        <p>My journey from electronics to elegant front-end development.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="about">
     <div class="container">
       <h2>About Me</h2>
       <div class="about-content">
         <div class="about-text">
           <p>Hi, I’m Vladimir — a front-end developer with a rich background in electronics and technical troubleshooting. After 17+ years working hands-on with digital printing systems, battery-powered vehicles, and mobile diagnostics, I transitioned into web development to bring elegant, responsive solutions to life.</p>
-          <div class="about-text">
 
-  <p>Today, I specialize in building responsive, elegant websites using HTML5, CSS3, JavaScript (ES6+), and React.js. I’m passionate about clean code, modular design, and creating intuitive user experiences. Whether it’s a multi-page portfolio, a landing page for a client, or a dynamic React app, I bring structure, clarity, and visual polish to every project.</p>
+          <p>Today, I specialize in building responsive, elegant websites using HTML5, CSS3, JavaScript (ES6+), and React.js. I’m passionate about clean code, modular design, and creating intuitive user experiences. Whether it’s a multi-page portfolio, a landing page for a client, or a dynamic React app, I bring structure, clarity, and visual polish to every project.</p>
 
-  <p>My strengths include:
-    <ul>
-      <li>Responsive design and mobile-first layouts</li>
-      <li>Component-based development with React</li>
-      <li>Version control with Git and GitHub</li>
-      <li>UX/UI principles and accessibility best practices</li>
-      <li>Rapid prototyping and iterative troubleshooting</li>
-    </ul>
-  </p>
+          <p>My strengths include:</p>
+          <ul>
+            <li>Responsive design and mobile-first layouts</li>
+            <li>Component-based development with React</li>
+            <li>Version control with Git and GitHub</li>
+            <li>UX/UI principles and accessibility best practices</li>
+            <li>Rapid prototyping and iterative troubleshooting</li>
+          </ul>
 
-  <p>I also bring a deep understanding of technical documentation, presentation design, and client communication — skills honed through years of fieldwork and collaboration. I’m detail-oriented, adaptable, and committed to delivering work that reflects both my standards and your goals.</p>
+          <p>I also bring a deep understanding of technical documentation, presentation design, and client communication — skills honed through years of fieldwork and collaboration. I’m detail-oriented, adaptable, and committed to delivering work that reflects both my standards and your goals.</p>
 
-  <p>If you're looking for a developer who blends technical precision with creative vision, I’d love to connect.</p>
-</div>
+          <p>If you're looking for a developer who blends technical precision with creative vision, I’d love to connect.</p>
           <p>Let’s build something that reflects your vision — and mine.</p>
         </div>
         <div class="about-image">
-          
+          <!-- Optional image goes here -->
         </div>
       </div>
     </div>

@@ -10,8 +10,14 @@
 <body>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Vladimir Consulting</h1>
-      <nav>
+      <h1 class="logo">VM Consulting</h1>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <div class="nav-links">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about/about.html">About</a></li>
@@ -19,16 +25,16 @@
           <li><a href="../portfolio/portfolio.html" class="active">Portfolio</a></li>
           <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <section class="portfolio-hero">
-    <div class="container">
-      <h2>My Portfolio</h2>
-      <p>Here are some of the projects I’m working on and contributing. You can find more on my GitHub profile.</p>
-    </div>
-  </section>
+ <section class="gradient-box">
+  <div class="container">
+    <h2>My Portfolio</h2>
+    <p>Here are some of the projects I’m working on and contributing. You can find more on my GitHub profile.</p>
+  </div>
+</section>
 
   <section class="projects-grid">
     <div class="container">
@@ -51,8 +57,6 @@
     </div>
   </section>
 
-  
-
   <section class="build-process">
     <div class="container">
       <h3>How I Build Projects</h3>
@@ -61,6 +65,7 @@
       <p>If you have an idea or need help turning a concept into a polished front-end experience, I’d be happy to collaborate.</p>
     </div>
   </section>
+
   <section class="github-section">
     <div class="container">
       <h3>Find More on GitHub</h3>

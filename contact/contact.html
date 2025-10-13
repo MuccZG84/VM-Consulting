@@ -11,7 +11,13 @@
   <header class="navbar">
     <div class="container">
       <h1 class="logo">VM Consulting</h1>
-      <nav>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <div class="nav-links">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about/about.html">About</a></li>
@@ -19,34 +25,38 @@
           <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <section class="contact-hero">
+  <section class="gradient-box">
     <div class="container">
-      <h2>Let's Connect</h2>
-      <p>If you're seeking a front-end developer who blends technical precision with creative flair — someone who listens, collaborates, and delivers with purpose — you've come to the right place. Whether you're launching a new idea, refining an existing product, or tackling a complex challenge, I bring clarity, reliability, and a hands-on mindset to every task. Let's turn your vision into a polished, responsive experience that truly stands out.</p>
+      <div class="narrow">
+        <h2>Let's Connect</h2>
+        <p>If you're seeking a front-end developer who blends technical precision with creative flair — someone who listens, collaborates, and delivers with purpose — you've come to the right place. Whether you're launching a new idea, refining an existing product, or tackling a complex challenge, I bring clarity, reliability, and a hands-on mindset to every task. Let's turn your vision into a polished, responsive experience that truly stands out.</p>
+      </div>
     </div>
   </section>
 
   <section class="contact-form-section">
     <div class="container">
-      <form action="https://formspree.io/f/xpwyyzwr" method="POST" onsubmit="return showConfirmation()">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required />
+      <div class="narrow">
+        <form action="https://formspree.io/f/xpwyyzwr" method="POST" onsubmit="return showConfirmation()">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="_replyto" required />
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="_replyto" required />
 
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
 
-      <div class="direct-email">
-        <p>Prefer to email directly? Reach me at <a href="mailto:vmucak84@gmail.com"><strong>vmucak@gmail.com</strong></a></p>
+        <div class="direct-email">
+          <p>Prefer to email directly? Reach me at <a href="mailto:vmucak84@gmail.com"><strong>vmucak@gmail.com</strong></a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -60,7 +70,7 @@
   <script>
     function showConfirmation() {
       alert("Thank you for reaching out! Your message has been sent successfully. I’ll get back to you as soon as possible.");
-      return true; // allow form to submit
+      return true;
     }
   </script>
 </body>
