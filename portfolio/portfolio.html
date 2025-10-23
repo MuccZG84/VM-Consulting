@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Vladimir Consulting</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio – VM Consulting</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/vm-consulting.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">VM Consulting</h1>
+      <h1 class="logo"><a href="../index.html">VM Consulting</a></h1>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
       </label>
-
       <div class="nav-links">
         <ul>
           <li><a href="../index.html">Home</a></li>
@@ -29,12 +29,16 @@
     </div>
   </header>
 
- <section class="gradient-box">
-  <div class="container">
-    <h2>My Portfolio</h2>
-    <p>Here are some of the projects I’m working on and contributing. You can find more on my GitHub profile.</p>
+  <section class="portfolio-hero">
+    
+      <div class="container">
+        <div class="gradient-box">
+        <h2><strong>My Portfolio</strong></h2>
+        <p>Here are some of the projects I’m working on and contributing. You can find more on my GitHub profile.</p>
+      </div>
+    </div>
   </div>
-</section>
+  </section>
 
   <section class="projects-grid">
     <div class="container">
@@ -70,7 +74,9 @@
     <div class="container">
       <h3>Find More on GitHub</h3>
       <p>My GitHub profile includes additional projects, code samples, and contributions. Feel free to explore and connect.</p>
-      <a href="https://github.com/MuccZG84" target="_blank" class="btn">Visit My GitHub</a>
+      <div class="button-wrapper">
+  <a href="https://github.com/MuccZG84" target="_blank" class="btn">Visit My GitHub</a>
+</div>
     </div>
   </section>
 
