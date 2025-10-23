@@ -408,10 +408,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-toggle-label {
-    display: block;
-  }
-
   .nav-links ul {
     flex-direction: column;
     gap: 0;
@@ -427,8 +423,11 @@ body {
   }
 
   .nav-links a {
-    padding: 1rem;
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid #eaeaea;
+    font-size: 1.1rem;
   }
 
   .nav-links a:last-child {
