@@ -26,9 +26,9 @@ html, body {
 /* === Layout Containers === */
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1440px !important;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 16px !important;
 }
 
 /* === Navbar === */
@@ -36,6 +36,7 @@ html, body {
   background-color: var(--soft-white);
   padding: 1rem 0;
   border-bottom: 1px solid #eaeaea;
+  border-top: none;
 }
 
 .navbar > .container {
@@ -48,7 +49,7 @@ html, body {
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: bold;
   color: var(--deep-navy);
 }
@@ -63,9 +64,8 @@ html, body {
 }
 
 /* === Nav Toggle === */
-.nav-toggle,
-.nav-toggle-label {
-  display: none;
+.nav-toggle {
+  display: none; /* hidden globally, shown in mobile via media query */
 }
 
 .nav-toggle-label {
@@ -179,6 +179,7 @@ html, body {
 section:first-of-type {
   margin-top: 0;
   padding-top: 2rem;
+  border-top: none;
 }
 
 /* === Intro Section === */
@@ -379,27 +380,8 @@ section:first-of-type {
 }
 
 /* === Utility Cleanup === */
-section:first-of-type {
-  margin-top: 0;
-  padding-top: 2rem;
-}
-
-.navbar,
-.container,
-.contact-hero,
-.services-hero,
-.hero,
-section:first-of-type {
-  border-top: none;
-}
 .github-section {
   padding-bottom: 3rem; 
-}
-/* === Bootstrap Overrides === */
-.container {
-  max-width: 1440px !important;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
 }
 
 body {
@@ -407,7 +389,48 @@ body {
   padding: 0 !important;
 }
 
+/* === Bootstrap Overrides === */
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    left: -9999px; /* keeps checkbox functional but hidden */
+  }
+
+  .nav-toggle-label {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: var(--deep-navy);
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+
+  .nav-toggle-label span::before {
+    top: -8px;
+  }
+
+  .nav-toggle-label span::after {
+    top: 8px;
+  }
+
   .nav-links ul {
     flex-direction: column;
     gap: 0;
@@ -428,9 +451,52 @@ body {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #eaeaea;
     font-size: 1.1rem;
+    text-align: left;
   }
 
   .nav-links a:last-child {
     border-bottom: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-toggle,
+  .nav-toggle-label {
+    display: none;
+  }
+}
+
+.btn--gold {
+  background-color: #d4af37;
+  color: #000;
+  border: 2px solid #d4af37;
+}
+
+.btn--gold:hover {
+  background-color: #c0a12f;
+  border-color: #c0a12f;
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.modal-box {
+  max-width: 500px;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none !important;
   }
 }
